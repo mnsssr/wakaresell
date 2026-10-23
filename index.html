@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Waka Resell!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style-2.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <a class="nav__logo" href="#top">WakaResell</a>
+        <button
+          class="nav__menu"
+          id="menuBtn"
+          aria-label="Меню"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#new" class="nav-link">Новинки</a></li>
+        <li><a href="#pods" class="nav-link">Подики</a></li>
+        <li><a href="#disposable" class="nav-link">Одноразки</a></li>
+        <li><a href="#sale" class="nav-link">Скидки</a></li>
+        <li></li>
+      </ul>
+    </nav>
+
+    <header id="top">
+      <div class="wrap header__container">
+        <div class="header__content">
+          <h1><span>Подики</span><br />Одноразки<br /><span>Жидкости</span></h1>
+          <p>Только для лиц старше 18 лет</p>
+          <div class="header__btns">
+            <a class="btn" href="#new">Смотреть каталог</a>
+          </div>
+        </div>
+        <div class="header__art" aria-hidden="true">💨</div>
+      </div>
+    </header>
+
+    <main id="catalog"></main>
+
+    <section class="promo">
+      <div class="wrap promo__container">
+        <h2 class="title">Не нашли нужный вкус или модель?</h2>
+        <p>Напишите нам в Telegram: подскажем по наличию, вкусам и доставке.</p>
+        <a
+          class="btn btn--light tg-link"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          >Написать админу</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">VapeShop</div>
+          <p>
+            Продукция содержит никотин и вызывает зависимость. Продажа лицам
+            младше 18 лет запрещена.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>Каталог</h4>
+          <ul class="footer__links">
+            <li><a href="#new">Новинки</a></li>
+            <li><a href="#pods">Подики</a></li>
+            <li><a href="#disposable">Одноразки</a></li>
+            <li><a href="#liquids">Жидкости</a></li>
+            <li><a href="#sale">Скидки</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Связь</h4>
+          <ul class="footer__links">
+            <li>
+              <a class="tg-link" href="#" target="_blank" rel="noopener"
+                >Telegram <span class="tg-name"></span
+              ></a>
+            </li>
+            <li><span>Доставка 24/7</span></li>
+            <li><span>Проверка товара перед отправкой</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">Copyright © 2026 WakaResell. 18+</div>
+    </footer>
+
+    <dialog id="age" class="age" aria-label="Подтверждение возраста">
+      <h2>Вам есть 18 лет?</h2>
+      <p>
+        Сайт содержит товары с никотином. Доступ только для совершеннолетних.
+      </p>
+    </dialog>
+    <dialog id="pd" aria-label="Товар"></dialog>
+    <dialog id="od">
+      <button class="x" id="ox" aria-label="Закрыть">×</button>
+      <form class="form" id="of">
+        <h2>Оформить заказ</h2>
+        <div id="osum" class="form__sum"></div>
+        <label>Имя<input name="name" required maxlength="60" /></label>
+        <label
+          >Как с вами связаться<input
+            name="contact"
+            required
+            maxlength="80"
+            placeholder="@telegram или телефон"
+        /></label>
+        <label
+          >Город и адрес доставки<input name="addr" maxlength="200"
+        /></label>
+        <input
+          name="website"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+          class="hp"
+        />
+        <button class="btn" type="submit" id="osub">Отправить заказ</button>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <script src="products.js"></script>
+    <script src="script-3.js"></script>
+  </body>
+</html>
