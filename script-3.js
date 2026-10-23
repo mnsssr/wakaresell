@@ -240,24 +240,4 @@ document.querySelectorAll(".tg-link").forEach((a) => (a.href = TG));
 document
   .querySelectorAll(".tg-name")
   .forEach((e) => (e.textContent = "@" + CONTACT.tg));
-
-/* подтверждение возраста 18+ */
-(function () {
-  let ok = false;
-  try {
-    ok = localStorage.getItem("age18") === "1";
-  } catch (e) {}
-  if (ok) return;
-  const d = $("#age");
-  d.addEventListener("cancel", (e) => e.preventDefault());
-  d.showModal();
-  $("#ageYes").onclick = () => {
-    try {
-      localStorage.setItem("age18", "1");
-    } catch (e) {}
-    d.close();
-  };
-  $("#ageNo").onclick = () => {
-    location.href = "https://www.google.com";
-  };
 })();
